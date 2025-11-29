@@ -26,7 +26,7 @@ jobs:
             - name: Upload Build Artifacts
               uses: actions/upload-artifact@v4
               with:
-                name: react-build
+                name: react-build 
                 path: dist
             - name: Send Email Notification
               uses: dawidd6/action-send-mail@v6
@@ -34,7 +34,7 @@ jobs:
                 server_address: smtp.gmail.com
                 server_port: 465
                 username: ${{secrets.MAIL_USERNAME}}
-                password: ${{secrets.MAIL_PASSWORD}}
+                password: ${{secrets.MAIL_PASSWORD}} 
                 subject: React App Build Successfully
                 to: ${{secrets.RECEIVER_EMAIL}}
                 from: ${{secrets.MAIL_USERNAME}}
